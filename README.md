@@ -1,11 +1,31 @@
-<div align="center">
+# Hh
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A new repository.
 
-  <h1>Built with AI Studio</h2>
+## Getting started
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+```bash
+git clone https://github.com/sabharivarshan111/hh.git
+cd hh
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Project layout
 
-</div>
+```
+.
+├── .github/            GitHub workflows and issue/PR templates
+├── docs/               Documentation
+├── src/                Source code
+├── tests/              Tests
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+Released under the [MIT License](LICENSE).
