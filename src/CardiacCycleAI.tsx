@@ -5,10 +5,10 @@ import {
   interpolate,
   Sequence,
   spring,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import {storyboard} from './storyboard';
 
 type Flow = 'fill' | 'eject' | 'none';
 
@@ -50,7 +50,7 @@ const GeneratedTile: React.FC<{tile:number; zoom?:number; style?:React.CSSProper
   ];
   const [col,row] = map[tile];
   return <div style={{
-    backgroundImage:'url('+storyboard+')',
+    backgroundImage:'url('+staticFile('storyboard.jpg')+')',
     backgroundRepeat:'no-repeat',
     backgroundSize:'400% 200%',
     backgroundPosition:(col*33.333)+'% '+(row*100)+'%',
