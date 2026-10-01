@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "render": "remotion render src/index.tsx CardiacCycle out/cardiac-cycle-remotion-ai.mp4 --codec=h264 --crf=18 --concurrency=2"
+    "render": "remotion render src/index.tsx CardiacCycle out/cardiac-cycle-remotion-ai.mp4 --codec=h264 --crf=18 --concurrency=2",
+    "render:master": "remotion render src/index-master.tsx CardiacCycleMaster out/cardiac-cycle-master.mp4 --codec=h264 --crf=15 --concurrency=2",
+    "qa:master": "remotion render src/index-master.tsx CardiacCycleMaster out/qa-master --frames=45,150,360,570,780,990,1200,1410,1690 --image-format=png"
   },
   "dependencies": {
-    "@remotion/cli": "4.0.529",
-    "remotion": "4.0.529",
+    "@remotion/cli": "4.0.532",
+    "remotion": "4.0.532",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "@remotion/animation-utils": "4.0.529",
-    "@remotion/fonts": "4.0.529",
-    "@remotion/paths": "4.0.529",
-    "@remotion/shapes": "4.0.529",
-    "@remotion/transitions": "4.0.529"
+    "@remotion/animation-utils": "4.0.532",
+    "@remotion/fonts": "4.0.532",
+    "@remotion/paths": "4.0.532",
+    "@remotion/shapes": "4.0.532",
+    "@remotion/transitions": "4.0.532",
+    "@remotion/layout-utils": "4.0.532"
   }
 }
