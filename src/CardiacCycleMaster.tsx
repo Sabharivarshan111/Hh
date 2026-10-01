@@ -215,7 +215,7 @@ const fillLeftPath =
 const ejectRightPath =
   'M 333 557 C 325 467 326 385 352 321 C 377 261 383 199 382 112';
 const ejectLeftPath =
-  'M 495 558 C 497 467 499 370 505 290 C 512 199 548 132 596 84';
+  'M 500 558 C 494 476 466 398 426 338 C 403 303 445 252 508 232 C 532 176 565 122 596 84';
 
 const pathForFlow = (flow: FlowMode) => {
   if (flow === 'fill') {
