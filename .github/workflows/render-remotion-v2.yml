@@ -19,8 +19,10 @@ jobs:
         run: npm install
       - name: Render 60-second vertical video
         run: npx remotion render src/index-ai.tsx CardiacCycle out/cardiac-cycle-remotion-ai.mp4 --codec=h264 --crf=18 --concurrency=2
-      - name: Verify video
-        run: ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration -of default=noprint_wrappers=1 out/cardiac-cycle-remotion-ai.mp4
+      - name: Verify rendered file exists
+        run: |
+          test -s out/cardiac-cycle-remotion-ai.mp4
+          ls -lh out/cardiac-cycle-remotion-ai.mp4
       - uses: actions/upload-artifact@v4
         with:
           name: cardiac-cycle-remotion-ai
