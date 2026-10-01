@@ -251,7 +251,8 @@ const FlowStream: React.FC<{
         stroke={color}
         strokeWidth={7}
         strokeLinecap="round"
-        opacity={0.13}
+        opacity={0.24}
+        markerEnd={color === '#34c7ff' ? 'url(#blueArrow)' : 'url(#redArrow)'}
       />
       <path
         d={path}
@@ -295,7 +296,8 @@ const ValveLeaflets: React.FC<{
   readonly label: string;
   readonly accent: string;
   readonly frame: number;
-}> = ({x, y, open, orientation, label, accent, frame}) => {
+  readonly labelDy?: number;
+}> = ({x, y, open, orientation, label, accent, frame, labelDy = 48}) => {
   const openAmount = open
     ? interpolate(frame, [0, 18], [0.15, 1], {
         extrapolateLeft: 'clamp',
@@ -360,7 +362,7 @@ const ValveLeaflets: React.FC<{
       )}
       <text
         x={x}
-        y={y + 48}
+        y={y + labelDy}
         textAnchor="middle"
         fill={accent}
         fontSize={14}
@@ -456,6 +458,12 @@ const HeartSvg: React.FC<{
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
+        <marker id="blueArrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M 0 0 L 9 4 L 0 8 Z" fill="#34c7ff" />
+        </marker>
+        <marker id="redArrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+          <path d="M 0 0 L 9 4 L 0 8 Z" fill="#ff4d68" />
+        </marker>
       </defs>
 
       <ellipse
@@ -610,6 +618,7 @@ const HeartSvg: React.FC<{
         label="PULMONARY"
         accent="#b9dfff"
         frame={frame}
+        labelDy={-38}
       />
       <ValveLeaflets
         x={508}
@@ -619,6 +628,7 @@ const HeartSvg: React.FC<{
         label="AORTIC"
         accent="#ffd0c8"
         frame={frame}
+        labelDy={-38}
       />
 
       {/* Chamber labels */}
@@ -1112,6 +1122,33 @@ const Intro: React.FC = () => {
 
       <div
         style={{
+          position: 'absolute',
+          width: 218,
+          height: 218,
+          right: 62,
+          top: 112,
+          borderRadius: 118,
+          border: '18px solid #36c7ff',
+          borderTopColor: '#ff4fb8',
+          borderRightColor: '#ff5368',
+          rotate: interpolate(frame, [0, INTRO_FRAMES - 1], ['0deg', '28deg'], {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+          }),
+          boxShadow: '0 0 44px rgba(54,199,255,0.24)',
+          backgroundColor: 'rgba(3,10,18,0.72)',
+          display: 'grid',
+          placeItems: 'center',
+        }}
+      >
+        <div style={{textAlign: 'center'}}>
+          <div style={{fontSize: 50, lineHeight: 0.95, fontWeight: 1000}}>0.8</div>
+          <div style={{fontSize: 22, marginTop: 6, fontWeight: 850}}>seconds</div>
+        </div>
+      </div>
+
+      <div
+        style={{
           marginTop: 30,
           height: 1050,
           borderRadius: 42,
@@ -1136,32 +1173,6 @@ const Intro: React.FC = () => {
           <HeartSvg phase={phase} frame={frame} duration={INTRO_FRAMES} />
         </div>
 
-        <div
-          style={{
-            position: 'absolute',
-            width: 290,
-            height: 290,
-            right: 78,
-            top: 320,
-            borderRadius: 150,
-            border: '23px solid #36c7ff',
-            borderTopColor: '#ff4fb8',
-            borderRightColor: '#ff5368',
-            rotate: interpolate(frame, [0, INTRO_FRAMES - 1], ['0deg', '28deg'], {
-              extrapolateLeft: 'clamp',
-              extrapolateRight: 'clamp',
-            }),
-            boxShadow: '0 0 50px rgba(54,199,255,0.28)',
-            backgroundColor: 'rgba(3,10,18,0.58)',
-            display: 'grid',
-            placeItems: 'center',
-          }}
-        >
-          <div style={{textAlign: 'center'}}>
-            <div style={{fontSize: 64, lineHeight: 0.95, fontWeight: 1000}}>0.8</div>
-            <div style={{fontSize: 27, marginTop: 6, fontWeight: 850}}>seconds</div>
-          </div>
-        </div>
       </div>
 
       <div style={{display: 'flex', gap: 10, marginTop: 27}}>
