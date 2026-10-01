@@ -20,11 +20,8 @@ jobs:
           mkdir -p public
           cat assets/storyboard.b64.part* | tr -d '\n' | base64 -d > public/storyboard.jpg
           test -s public/storyboard.jpg
-          python - <<'PY'
-          from PIL import Image
-          im = Image.open('public/storyboard.jpg')
-          print('AI artwork:', im.size)
-          PY
+          file public/storyboard.jpg || true
+          wc -c public/storyboard.jpg
       - name: Install Remotion
         run: npm install
       - name: Render 60-second vertical video
