@@ -172,6 +172,10 @@ const phases: Phase[] = [
   },
 ];
 
+const INTRO_FRAMES = 90;
+const PHASE_FRAMES = 210;
+const RECAP_FRAMES = 240;
+
 const clamp = (value: number, min = 0, max = 1) =>
   Math.max(min, Math.min(max, value));
 
@@ -782,9 +786,9 @@ const MeaningCard: React.FC<{
 
 const PhaseScene: React.FC<{readonly phase: Phase}> = ({phase}) => {
   const frame = useCurrentFrame();
-  const {fps, durationInFrames} = useVideoConfig();
-  const opacity = sceneOpacity(frame, durationInFrames);
-  const progress = clamp(frame / Math.max(1, durationInFrames - 1));
+  useVideoConfig();
+  const opacity = sceneOpacity(frame, PHASE_FRAMES);
+  const progress = clamp(frame / Math.max(1, PHASE_FRAMES - 1));
   const titleSize = phase.title.length > 24 ? 38 : 46;
 
   return (
@@ -924,7 +928,7 @@ const PhaseScene: React.FC<{readonly phase: Phase}> = ({phase}) => {
             bottom: 102,
           }}
         >
-          <HeartSvg phase={phase} frame={frame} duration={durationInFrames} />
+          <HeartSvg phase={phase} frame={frame} duration={PHASE_FRAMES} />
         </div>
 
         <div
@@ -1044,8 +1048,7 @@ const PhaseScene: React.FC<{readonly phase: Phase}> = ({phase}) => {
 
 const Intro: React.FC = () => {
   const frame = useCurrentFrame();
-  const {durationInFrames} = useVideoConfig();
-  const opacity = sceneOpacity(frame, durationInFrames);
+  const opacity = sceneOpacity(frame, INTRO_FRAMES);
   const phase = phases[7 - 1];
 
   return (
@@ -1123,7 +1126,7 @@ const Intro: React.FC = () => {
           style={{
             position: 'absolute',
             inset: '35px 70px 80px 70px',
-            scale: interpolate(frame, [0, durationInFrames - 1], [0.98, 1.02], {
+            scale: interpolate(frame, [0, INTRO_FRAMES - 1], [0.98, 1.02], {
               extrapolateLeft: 'clamp',
               extrapolateRight: 'clamp',
               output: 'perceptual-scale',
@@ -1144,7 +1147,7 @@ const Intro: React.FC = () => {
             border: '23px solid #36c7ff',
             borderTopColor: '#ff4fb8',
             borderRightColor: '#ff5368',
-            rotate: interpolate(frame, [0, durationInFrames - 1], ['0deg', '28deg'], {
+            rotate: interpolate(frame, [0, INTRO_FRAMES - 1], ['0deg', '28deg'], {
               extrapolateLeft: 'clamp',
               extrapolateRight: 'clamp',
             }),
@@ -1196,8 +1199,7 @@ const Intro: React.FC = () => {
 
 const Recap: React.FC = () => {
   const frame = useCurrentFrame();
-  const {durationInFrames} = useVideoConfig();
-  const opacity = sceneOpacity(frame, durationInFrames);
+  const opacity = sceneOpacity(frame, RECAP_FRAMES);
 
   return (
     <AbsoluteFill
@@ -1348,33 +1350,33 @@ export const CardiacCycleMaster: React.FC = () => {
 
   return (
     <AbsoluteFill>
-      <Sequence from={0} durationInFrames={90} premountFor={fps}>
+      <Sequence from={0} durationInFrames={INTRO_FRAMES} premountFor={fps}>
         <Intro />
       </Sequence>
 
-      <Sequence from={90} durationInFrames={210} premountFor={fps}>
+      <Sequence from={90} durationInFrames={PHASE_FRAMES} premountFor={fps}>
         <PhaseScene phase={phases[0]} />
       </Sequence>
-      <Sequence from={300} durationInFrames={210} premountFor={fps}>
+      <Sequence from={300} durationInFrames={PHASE_FRAMES} premountFor={fps}>
         <PhaseScene phase={phases[1]} />
       </Sequence>
-      <Sequence from={510} durationInFrames={210} premountFor={fps}>
+      <Sequence from={510} durationInFrames={PHASE_FRAMES} premountFor={fps}>
         <PhaseScene phase={phases[2]} />
       </Sequence>
-      <Sequence from={720} durationInFrames={210} premountFor={fps}>
+      <Sequence from={720} durationInFrames={PHASE_FRAMES} premountFor={fps}>
         <PhaseScene phase={phases[3]} />
       </Sequence>
-      <Sequence from={930} durationInFrames={210} premountFor={fps}>
+      <Sequence from={930} durationInFrames={PHASE_FRAMES} premountFor={fps}>
         <PhaseScene phase={phases[4]} />
       </Sequence>
-      <Sequence from={1140} durationInFrames={210} premountFor={fps}>
+      <Sequence from={1140} durationInFrames={PHASE_FRAMES} premountFor={fps}>
         <PhaseScene phase={phases[5]} />
       </Sequence>
-      <Sequence from={1350} durationInFrames={210} premountFor={fps}>
+      <Sequence from={1350} durationInFrames={PHASE_FRAMES} premountFor={fps}>
         <PhaseScene phase={phases[6]} />
       </Sequence>
 
-      <Sequence from={1560} durationInFrames={240} premountFor={fps}>
+      <Sequence from={1560} durationInFrames={RECAP_FRAMES} premountFor={fps}>
         <Recap />
       </Sequence>
     </AbsoluteFill>
