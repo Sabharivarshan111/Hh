@@ -1,0 +1,29 @@
+name: Render Remotion Cardiac Cycle
+
+on:
+  push:
+    branches:
+      - remotion-cardiac-cycle-20261001
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install Remotion
+        run: npm install
+      - name: Render 60-second vertical video
+        run: npx remotion render src/index-ai.tsx CardiacCycle out/cardiac-cycle-remotion-ai.mp4 --codec=h264 --crf=18 --concurrency=2
+      - name: Verify video
+        run: ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,nb_frames -show_entries format=duration -of default=noprint_wrappers=1 out/cardiac-cycle-remotion-ai.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cardiac-cycle-remotion-ai
+          path: out/cardiac-cycle-remotion-ai.mp4
+          retention-days: 7
