@@ -1133,7 +1133,7 @@ const Intro: React.FC = () => {
             }),
           }}
         >
-          <HeartSvg phase={phase} frame={frame} duration={durationInFrames} />
+          <HeartSvg phase={phase} frame={frame} duration={INTRO_FRAMES} />
         </div>
 
         <div
