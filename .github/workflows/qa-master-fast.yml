@@ -1,0 +1,35 @@
+name: QA Cardiac Cycle Master Fast
+
+on:
+  push:
+    branches:
+      - remotion-cardiac-cycle-20261001
+    paths:
+      - src/CardiacCycleMaster.tsx
+      - src/RootMaster.tsx
+      - src/index-master.tsx
+      - .github/workflows/qa-master-fast.yml
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - name: Render representative frames only
+        run: |
+          mkdir -p out/qa-fast
+          npx remotion render src/index-master.tsx CardiacCycleMaster out/qa-fast \
+            --frames=45,150,360,570,780,990,1200,1410,1690 \
+            --image-format=png --concurrency=2
+          find out/qa-fast -type f -name '*.png' | sort
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cardiac-cycle-master-qa-fast
+          path: out/qa-fast
+          retention-days: 7
