@@ -15,6 +15,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Reconstruct AI-generated cardiac artwork
+        run: |
+          mkdir -p public
+          cat assets/storyboard.b64.part* | tr -d '\n' | base64 -d > public/storyboard.jpg
+          test -s public/storyboard.jpg
+          python - <<'PY'
+          from PIL import Image
+          im = Image.open('public/storyboard.jpg')
+          print('AI artwork:', im.size)
+          PY
       - name: Install Remotion
         run: npm install
       - name: Render 60-second vertical video
