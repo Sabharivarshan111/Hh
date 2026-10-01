@@ -1,0 +1,76 @@
+name: Render Cardiac Cycle Master
+
+on:
+  push:
+    branches:
+      - remotion-cardiac-cycle-20261001
+    paths:
+      - src/CardiacCycleMaster.tsx
+      - src/RootMaster.tsx
+      - src/index-master.tsx
+      - package.json
+      - .github/workflows/render-master.yml
+  workflow_dispatch:
+
+jobs:
+  render-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Check Remotion versions
+        run: npx remotion versions
+
+      - name: Static master audit
+        run: |
+          set -e
+          ! grep -E -i "ECG|PHYSIOLOGY" src/CardiacCycleMaster.tsx
+          ! grep -E "<Img|<CanvasImage|staticFile\(" src/CardiacCycleMaster.tsx
+          grep -q "interpolatePath" src/CardiacCycleMaster.tsx
+          grep -q "getPointAtLength" src/CardiacCycleMaster.tsx
+          grep -q "WHAT THIS MEANS" src/CardiacCycleMaster.tsx
+          grep -q "Mitral valve" src/CardiacCycleMaster.tsx
+          grep -q "Tricuspid valve" src/CardiacCycleMaster.tsx
+          grep -q "Aortic valve" src/CardiacCycleMaster.tsx
+          grep -q "Pulmonary valve" src/CardiacCycleMaster.tsx
+          echo "Static audit passed: SVG/path-only master, no ECG/PHYSIOLOGY."
+
+      - name: Render production MP4
+        run: |
+          mkdir -p out
+          npx remotion render src/index-master.tsx CardiacCycleMaster out/CARDIAC_CYCLE_MASTER.mp4 \
+            --codec=h264 --crf=15 --concurrency=2
+
+      - name: Render QA frames
+        run: |
+          mkdir -p out/qa
+          npx remotion render src/index-master.tsx CardiacCycleMaster out/qa \
+            --frames=45,150,360,570,780,990,1200,1410,1690 \
+            --image-format=png --concurrency=2
+
+      - name: Verify artifacts exist
+        run: |
+          test -s out/CARDIAC_CYCLE_MASTER.mp4
+          test -d out/qa
+          find out/qa -type f -name '*.png' | sort
+          test "$(find out/qa -type f -name '*.png' | wc -l)" -ge 9
+          ls -lh out/CARDIAC_CYCLE_MASTER.mp4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cardiac-cycle-master-video
+          path: out/CARDIAC_CYCLE_MASTER.mp4
+          retention-days: 7
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cardiac-cycle-master-qa
+          path: out/qa
+          retention-days: 7
