@@ -1,0 +1,40 @@
+name: Install Official Remotion Agent Skills
+
+on:
+  push:
+    branches:
+      - remotion-cardiac-cycle-20261001
+    paths:
+      - .github/workflows/install-remotion-skills.yml
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: remotion-cardiac-cycle-20261001
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install official Remotion skills for Codex
+        env:
+          DISABLE_TELEMETRY: "1"
+        run: |
+          npx -y skills@1.5.26 add remotion-dev/skills --skill '*' --agent codex --copy --yes
+          echo "Installed skill files:"
+          find . -maxdepth 4 -type f \( -name 'SKILL.md' -o -name 'skills-lock.json' \) -print | sort
+      - name: Commit installed skills
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Install official Remotion agent skills"
+            git push origin HEAD:remotion-cardiac-cycle-20261001
+          fi
