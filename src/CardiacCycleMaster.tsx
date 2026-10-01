@@ -631,6 +631,24 @@ const HeartSvg: React.FC<{
         labelDy={-38}
       />
 
+      {/* Great-vessel labels: added after external visual review */}
+      <g fontSize={15} fontWeight={900} letterSpacing={0.5}>
+        <path d="M 183 88 L 214 126" stroke="#9de6ff" strokeWidth={2} opacity={0.9} />
+        <text x={134} y={82} fill="#9de6ff">SVC</text>
+
+        <path d="M 170 746 L 225 697" stroke="#9de6ff" strokeWidth={2} opacity={0.9} />
+        <text x={126} y={762} fill="#9de6ff">IVC</text>
+
+        <path d="M 318 88 L 385 120" stroke="#9de6ff" strokeWidth={2} opacity={0.9} />
+        <text x={252} y={78} fill="#9de6ff">PULMONARY ARTERY</text>
+
+        <path d="M 612 60 L 573 100" stroke="#ffc0b4" strokeWidth={2} opacity={0.9} />
+        <text x={610} y={54} fill="#ffc0b4">AORTA</text>
+
+        <path d="M 650 405 L 646 354" stroke="#ffc0b4" strokeWidth={2} opacity={0.9} />
+        <text x={584} y={426} fill="#ffc0b4">PULMONARY VEINS</text>
+      </g>
+
       {/* Chamber labels */}
       {[
         {x: 226, y: 289, label: 'RA'},
