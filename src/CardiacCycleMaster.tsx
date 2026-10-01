@@ -1128,20 +1128,27 @@ const Intro: React.FC = () => {
           right: 62,
           top: 112,
           borderRadius: 118,
-          border: '18px solid #36c7ff',
-          borderTopColor: '#ff4fb8',
-          borderRightColor: '#ff5368',
-          rotate: interpolate(frame, [0, INTRO_FRAMES - 1], ['0deg', '28deg'], {
-            extrapolateLeft: 'clamp',
-            extrapolateRight: 'clamp',
-          }),
-          boxShadow: '0 0 44px rgba(54,199,255,0.24)',
           backgroundColor: 'rgba(3,10,18,0.72)',
+          boxShadow: '0 0 44px rgba(54,199,255,0.24)',
           display: 'grid',
           placeItems: 'center',
         }}
       >
-        <div style={{textAlign: 'center'}}>
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            borderRadius: 118,
+            border: '18px solid #36c7ff',
+            borderTopColor: '#ff4fb8',
+            borderRightColor: '#ff5368',
+            rotate: interpolate(frame, [0, INTRO_FRAMES - 1], ['0deg', '28deg'], {
+              extrapolateLeft: 'clamp',
+              extrapolateRight: 'clamp',
+            }),
+          }}
+        />
+        <div style={{textAlign: 'center', position: 'relative'}}>
           <div style={{fontSize: 50, lineHeight: 0.95, fontWeight: 1000}}>0.8</div>
           <div style={{fontSize: 22, marginTop: 6, fontWeight: 850}}>seconds</div>
         </div>
