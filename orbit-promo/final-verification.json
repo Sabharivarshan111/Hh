@@ -1,0 +1,53 @@
+{
+  "ORBIT_TNMGR_KUHS_MusicOnly_36s": {
+    "duration": 36.011,
+    "frames_decoded": 2160,
+    "fps": 60,
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "decode_errors": 0,
+    "near_black_frames": [],
+    "visual_review_samples": 73,
+    "mean_luminance_range": [
+      15.304478523662551,
+      208.56721000514403
+    ],
+    "audio_streams": [
+      {
+        "codec": "aac",
+        "sample_rate": "48000"
+      }
+    ]
+  },
+  "ORBIT_TNMGR_KUHS_VoiceOnly_48s": {
+    "duration": 48.0,
+    "frames_decoded": 2880,
+    "fps": 60,
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "decode_errors": 0,
+    "near_black_frames": [],
+    "visual_review_samples": 83,
+    "mean_luminance_range": [
+      15.672469778806585,
+      208.4651652520576
+    ],
+    "audio_streams": [
+      {
+        "codec": "aac",
+        "sample_rate": "48000"
+      }
+    ]
+  },
+  "audio": {
+    "voice_lufs": -16.29,
+    "voice_true_peak_db": -4.48,
+    "music_lufs": -16.01,
+    "music_true_peak_db": -1.89,
+    "narration_postprocess_tempo": 1.0
+  }
+}

@@ -1,0 +1,147 @@
+[
+  {
+    "at": 0,
+    "d": 3.2,
+    "kind": "hook",
+    "caption": "Too many tabs?\nFind your orbit.",
+    "voice": "Too many tabs? Meet Orbit."
+  },
+  {
+    "at": 2.95,
+    "d": 3.35,
+    "kind": "universities",
+    "caption": "TNMGR + KUHS",
+    "sub": "Two university question banks.",
+    "files": [
+      "tnmgr-subjects",
+      "kuhs-subjects"
+    ],
+    "voice": "Built for your university."
+  },
+  {
+    "at": 6.05,
+    "d": 3.35,
+    "kind": "home",
+    "caption": "Start with\nyour university.",
+    "files": [
+      "tnmgr-home",
+      "kuhs-home"
+    ],
+    "voice": "Choose your year and start revising."
+  },
+  {
+    "at": 9.15,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "tnmgr-questions",
+    "caption": "Questions that\nlead somewhere.",
+    "mode": "push",
+    "voice": "Find the questions for your topic."
+  },
+  {
+    "at": 12.25,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "kuhs-search",
+    "caption": "Search.\nFind your chapter.",
+    "mode": "macro",
+    "voice": "Find your chapter in seconds."
+  },
+  {
+    "at": 15.35,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "tnmgr-answer",
+    "caption": "Triple-tap.\nOpen the answer.",
+    "mode": "pull",
+    "accent": "#69aaff",
+    "voice": "Triple-tap to open your study notes."
+  },
+  {
+    "at": 18.45,
+    "d": 3.35,
+    "kind": "mcq",
+    "file": "tnmgr-mcq",
+    "caption": "Switch to\nMCQ practice.",
+    "accent": "#ed83e7",
+    "voice": "Practise multiple-choice questions."
+  },
+  {
+    "at": 21.55,
+    "d": 3.85,
+    "kind": "ai",
+    "file": "kuhs-askai",
+    "caption": "Meet ACEV AI.",
+    "sub": "Ask. Understand. Keep moving.",
+    "accent": "#bc95ff",
+    "voice": "Meet your A.I. study companion."
+  },
+  {
+    "at": 25.15,
+    "d": 3.35,
+    "kind": "cards",
+    "files": [
+      "kuhs-anki",
+      "kuhs-anki-answer"
+    ],
+    "caption": "Recall first.\nThen reveal.",
+    "accent": "#bc95ff",
+    "voice": "Recall first, then reveal the answer."
+  },
+  {
+    "at": 28.25,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "tnmgr-personal",
+    "caption": "Keep your\nown study notes.",
+    "mode": "push",
+    "accent": "#ed83e7",
+    "voice": "Keep your own revision notes."
+  },
+  {
+    "at": 31.35,
+    "d": 3.35,
+    "kind": "dual",
+    "files": [
+      "tnmgr-progress",
+      "tnmgr-attendance"
+    ],
+    "caption": "Track attendance.\nSee your progress.",
+    "accent": "#eac578",
+    "voice": "Track your attendance and study progress."
+  },
+  {
+    "at": 34.45,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "kuhs-timer",
+    "caption": "Make time\nfor deep focus.",
+    "mode": "macro",
+    "accent": "#a9e6a7",
+    "voice": "Make time for focused study."
+  },
+  {
+    "at": 37.55,
+    "d": 3.35,
+    "kind": "india",
+    "caption": "Made in India.",
+    "sub": "Built by a medical student.",
+    "voice": "Made in India."
+  },
+  {
+    "at": 40.65,
+    "d": 3.35,
+    "kind": "numbers",
+    "caption": "Built around\nyour university.",
+    "sub": "University-specific question banks",
+    "voice": "Two university patterns. One Orbit."
+  },
+  {
+    "at": 43.75,
+    "d": 4.25,
+    "kind": "end",
+    "caption": "Find your orbit.",
+    "sub": "ORBIT MBBS \u00b7 TNMGR + KUHS",
+    "voice": "Find your orbit. Download on Google Play."
+  }
+]

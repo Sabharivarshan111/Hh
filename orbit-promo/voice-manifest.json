@@ -1,0 +1,122 @@
+[
+  {
+    "index": 0,
+    "original_trimmed_duration": 1.101587,
+    "tempo": 1,
+    "duration": 1.101587,
+    "file": "public/audio/narration-00.wav",
+    "text": "Meet Orbit."
+  },
+  {
+    "index": 1,
+    "original_trimmed_duration": 1.851587,
+    "tempo": 1,
+    "duration": 1.851587,
+    "file": "public/audio/narration-01.wav",
+    "text": "Now for Kerala, too."
+  },
+  {
+    "index": 2,
+    "original_trimmed_duration": 2.127891,
+    "tempo": 1,
+    "duration": 2.127891,
+    "file": "public/audio/narration-02.wav",
+    "text": "Choose your year and start revising."
+  },
+  {
+    "index": 3,
+    "original_trimmed_duration": 2.141088,
+    "tempo": 1,
+    "duration": 2.141088,
+    "file": "public/audio/narration-03.wav",
+    "text": "Find the questions for your topic."
+  },
+  {
+    "index": 4,
+    "original_trimmed_duration": 1.943719,
+    "tempo": 1,
+    "duration": 1.943719,
+    "file": "public/audio/narration-04.wav",
+    "text": "Find your chapter in seconds."
+  },
+  {
+    "index": 5,
+    "original_trimmed_duration": 2.246349,
+    "tempo": 1,
+    "duration": 2.246349,
+    "file": "public/audio/narration-05.wav",
+    "text": "Triple-tap to open your study notes."
+  },
+  {
+    "index": 6,
+    "original_trimmed_duration": 2.285805,
+    "tempo": 1,
+    "duration": 2.285805,
+    "file": "public/audio/narration-06.wav",
+    "text": "Practise multiple-choice questions."
+  },
+  {
+    "index": 7,
+    "original_trimmed_duration": 2.062086,
+    "tempo": 1,
+    "duration": 2.062086,
+    "file": "public/audio/narration-07.wav",
+    "text": "Meet your AI study companion."
+  },
+  {
+    "index": 8,
+    "original_trimmed_duration": 2.680544,
+    "tempo": 1,
+    "duration": 2.680544,
+    "file": "public/audio/narration-08.wav",
+    "text": "Recall first, then reveal the answer."
+  },
+  {
+    "index": 9,
+    "original_trimmed_duration": 1.785805,
+    "tempo": 1,
+    "duration": 1.785805,
+    "file": "public/audio/narration-09.wav",
+    "text": "Keep your own revision notes."
+  },
+  {
+    "index": 10,
+    "original_trimmed_duration": 2.509501,
+    "tempo": 1,
+    "duration": 2.509501,
+    "file": "public/audio/narration-10.wav",
+    "text": "Track your attendance and study progress."
+  },
+  {
+    "index": 11,
+    "original_trimmed_duration": 1.851587,
+    "tempo": 1,
+    "duration": 1.851587,
+    "file": "public/audio/narration-11.wav",
+    "text": "Make time for focused study."
+  },
+  {
+    "index": 12,
+    "original_trimmed_duration": 1.167392,
+    "tempo": 1,
+    "duration": 1.167392,
+    "file": "public/audio/narration-12.wav",
+    "text": "Made in India."
+  },
+  {
+    "index": 13,
+    "original_trimmed_duration": 2.97263,
+    "tempo": 1,
+    "duration": 2.97263,
+    "file": "public/audio/narration-13.wav",
+    "text": "Two patterns. One Orbit."
+  },
+  {
+    "index": 14,
+    "original_trimmed_duration": 3.67,
+    "tempo": 1,
+    "duration": 3.67,
+    "file": "public/audio/narration-14.wav",
+    "text": "Find your orbit. Download on Google Play."
+  }
+]

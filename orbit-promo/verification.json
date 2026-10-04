@@ -1,0 +1,199 @@
+{
+  "reference_frames_decoded": 886,
+  "shot_count": 15,
+  "unique_screen_views_used": 18,
+  "captured_screen_files": 41,
+  "missing_screen_assets": [],
+  "video_and_audio_fully_decoded": true,
+  "narration_fits_scenes": true,
+  "maximum_speech_tempo": 1,
+  "native_device_tested": false,
+  "competitor_authenticated_app_tested": false,
+  "claims_not_independently_verified": [
+    "Cortex student adoption",
+    "Cortex college adoption",
+    "overall app superiority"
+  ],
+  "mascot_revision": {
+    "design": "New teal open-book study companion with coral bookmark, stethoscope and orbit ring",
+    "prior_engine_removed": true,
+    "ai_preview_avatar_recaptured": true,
+    "preview_errors": [],
+    "installed_app_changed": false,
+    "legal_clearance_performed": false
+  },
+  "icon_revision": {
+    "font": "Noto Color Emoji v2.047",
+    "subject_and_fallback_glyphs_covered": 15,
+    "missing_glyphs": [],
+    "university_year_screen_sets_visually_reviewed": 8,
+    "preview_errors": [],
+    "all_screens_recaptured": true,
+    "university_shot": "Enlarged sequential screens with slide and crossfade",
+    "installed_app_changed": false
+  },
+  "final_variants": {
+    "voice_only": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "60/1",
+          "duration": "48.000000",
+          "nb_frames": "2880",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "duration": "48.000000",
+          "nb_frames": "2252"
+        }
+      ],
+      "format": {
+        "duration": "48.000000",
+        "size": "19177122"
+      }
+    },
+    "music": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "60/1",
+          "duration": "48.000000",
+          "nb_frames": "2880",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "duration": "48.000000",
+          "nb_frames": "2252"
+        }
+      ],
+      "format": {
+        "duration": "48.000000",
+        "size": "19242932"
+      }
+    }
+  },
+  "caption_layout": {
+    "phone_stage_bottom": 1200,
+    "caption_top": 1260,
+    "promotional_caption_overlap_with_phone": false,
+    "whole_glyph_fade_in": true
+  },
+  "college_list_counts": {
+    "tnmgr": 60,
+    "kuhs_keam_prospectus": 35,
+    "adoption_or_recommendation_claim": false
+  },
+  "music_cut_loudness": {
+    "input_i": -16.48,
+    "input_tp": -2.48,
+    "input_lra": 3.5
+  },
+  "distinct_visual_edits": {
+    "voice_only": "Guided feature walkthrough",
+    "music": "Native-screen montage hook; AI and recall first; reordered scenes, rewritten captions and faster entrances",
+    "music_storyboard": "storyboard-music.json"
+  },
+  "presentation_voice": {
+    "voice": "en-US-AndrewNeural",
+    "locale": "American English",
+    "generation_rate": "-18%",
+    "pitch": "-2Hz",
+    "word_boundary_script_validation": true,
+    "post_processing_tempo": 1,
+    "verified_clip_count": 15
+  },
+  "full_screen_revision": {
+    "phone_width": 480,
+    "phone_height": 1040,
+    "stage_height": 1090,
+    "single_hold_max_scale": 0.96,
+    "image_fit": "contain",
+    "image_crop": false,
+    "stage_fade_mask": false,
+    "opaque_scene_backgrounds": true,
+    "mcq_preview_diagnostic_hidden_before_capture": true
+  },
+  "final_aac_levels_dbfs": {
+    "voice_only": {
+      "mean_volume": -20.9,
+      "max_volume": -4.5
+    },
+    "music": {
+      "mean_volume": -19.5,
+      "max_volume": -2.5
+    }
+  },
+  "soundtrack_metrics": {
+    "voice-only": {
+      "duration": 48.0,
+      "peak_dbfs": -4.504298524628549,
+      "gap_rms": 0.0
+    },
+    "music-mix": {
+      "duration": 48.0,
+      "peak_dbfs": -2.4818266494347303,
+      "gap_rms": 0.13145578228380794
+    }
+  },
+  "final_soundtrack_loudness": {
+    "voice-only": {
+      "input_i": -16.46,
+      "input_tp": -4.5,
+      "input_lra": 4.2
+    },
+    "music-mix": {
+      "input_i": -16.48,
+      "input_tp": -2.48,
+      "input_lra": 3.5
+    }
+  },
+  "distinct_visual_frames_checked": true,
+  "fast_no_voice_cut": {
+    "metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "60/1",
+          "nb_frames": "1440",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_name": "aac",
+          "r_frame_rate": "0/0",
+          "nb_frames": "1127"
+        }
+      ],
+      "format": {
+        "duration": "24.000000",
+        "size": "10104923"
+      }
+    },
+    "music_bpm": 144,
+    "shot_count": 13,
+    "narration_inputs": 0,
+    "audio_source": "fast-music-only.wav",
+    "final_aac_peak_dbfs": -2.7,
+    "full_decode_passed": true,
+    "representative_frames_reviewed": 14,
+    "narrated_replacement_status": "Pending ElevenLabs browser authorization and audio audition"
+  }
+}

@@ -1,0 +1,135 @@
+[
+  {
+    "at": 0.0,
+    "d": 1.6666666666666667,
+    "kind": "montageHook",
+    "caption": "Your next exam.\nFind your orbit.",
+    "sourceIndex": 0,
+    "sub": ""
+  },
+  {
+    "at": 1.6666666666666667,
+    "d": 1.6666666666666667,
+    "kind": "universities",
+    "caption": "TNMGR + KUHS",
+    "sub": "",
+    "files": [
+      "tnmgr-subjects",
+      "kuhs-subjects"
+    ],
+    "sourceIndex": 1
+  },
+  {
+    "at": 3.3333333333333335,
+    "d": 1.6666666666666667,
+    "kind": "screen",
+    "file": "tnmgr-questions",
+    "caption": "Questions by topic.",
+    "mode": "push",
+    "sourceIndex": 3,
+    "sub": ""
+  },
+  {
+    "at": 5.0,
+    "d": 1.6666666666666667,
+    "kind": "screen",
+    "file": "tnmgr-answer",
+    "caption": "Triple-tap. AI notes.",
+    "mode": "pull",
+    "accent": "#69aaff",
+    "sourceIndex": 5,
+    "sub": ""
+  },
+  {
+    "at": 6.666666666666667,
+    "d": 1.6666666666666667,
+    "kind": "mcq",
+    "file": "tnmgr-mcq",
+    "caption": "Test your recall.",
+    "accent": "#ed83e7",
+    "sourceIndex": 6,
+    "sub": ""
+  },
+  {
+    "at": 8.333333333333334,
+    "d": 1.6666666666666667,
+    "kind": "ai",
+    "file": "kuhs-askai",
+    "caption": "Meet ACEV AI.",
+    "sub": "",
+    "accent": "#bc95ff",
+    "sourceIndex": 7
+  },
+  {
+    "at": 10.0,
+    "d": 1.6666666666666667,
+    "kind": "cards",
+    "files": [
+      "kuhs-anki",
+      "kuhs-anki-answer"
+    ],
+    "caption": "Recall. Reveal. Repeat.",
+    "accent": "#bc95ff",
+    "sourceIndex": 8,
+    "sub": ""
+  },
+  {
+    "at": 11.666666666666666,
+    "d": 1.6666666666666667,
+    "kind": "screen",
+    "file": "tnmgr-personal",
+    "caption": "Your revision notes.",
+    "mode": "push",
+    "accent": "#ed83e7",
+    "sourceIndex": 9,
+    "sub": ""
+  },
+  {
+    "at": 13.333333333333334,
+    "d": 1.6666666666666667,
+    "kind": "dual",
+    "files": [
+      "tnmgr-progress",
+      "tnmgr-attendance"
+    ],
+    "caption": "Attendance + progress.",
+    "accent": "#eac578",
+    "sourceIndex": 10,
+    "sub": ""
+  },
+  {
+    "at": 15.0,
+    "d": 1.6666666666666667,
+    "kind": "screen",
+    "file": "kuhs-timer",
+    "caption": "Time to focus.",
+    "mode": "macro",
+    "accent": "#a9e6a7",
+    "sourceIndex": 11,
+    "sub": ""
+  },
+  {
+    "at": 16.666666666666668,
+    "d": 1.6666666666666667,
+    "kind": "numbers",
+    "caption": "Two patterns.\nOne ORBIT.",
+    "sub": "",
+    "sourceIndex": 13
+  },
+  {
+    "at": 18.333333333333332,
+    "d": 1.6666666666666667,
+    "kind": "india",
+    "caption": "Made in India.",
+    "sub": "",
+    "sourceIndex": 12
+  },
+  {
+    "at": 20.0,
+    "d": 4.0,
+    "kind": "end",
+    "caption": "Find your orbit.",
+    "sub": "",
+    "sourceIndex": 14
+  }
+]

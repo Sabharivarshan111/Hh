@@ -1,0 +1,41 @@
+{
+  "name": "orbit-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:music": "node --require ./network-shim.cjs render-final.mjs",
+    "render:voice": "node --require ./network-shim.cjs render-final.mjs --voice"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@babel/runtime": "^8.0.5",
+    "@fontsource-variable/roboto": "^5.3.0",
+    "@react-native/typescript-config": "^0.87.1",
+    "@react-navigation/bottom-tabs": "^7.20.0",
+    "@react-navigation/native": "^7.5.0",
+    "@react-navigation/native-stack": "^7.20.0",
+    "@remotion/cli": "^4.0.532",
+    "@remotion/motion-blur": "^4.0.532",
+    "@remotion/shapes": "^4.0.532",
+    "@remotion/transitions": "^4.0.532",
+    "@supabase/supabase-js": "^2.117.2",
+    "@vitejs/plugin-react": "^5.2.0",
+    "lucide-react": "^1.49.0",
+    "playwright-core": "^1.63.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-native-get-random-values": "^2.0.0",
+    "react-native-safe-area-context": "^5.10.1",
+    "react-native-screens": "^4.28.0",
+    "react-native-svg": "^15.15.5",
+    "react-native-url-polyfill": "^4.0.0",
+    "react-native-web": "^0.21.3",
+    "remotion": "^4.0.532",
+    "vite": "^7.3.6"
+  }
+}

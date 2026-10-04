@@ -1,0 +1,5 @@
+node_modules/
+.remotion/
+dist/
+*.tmp
+public/audio/trim-*.wav

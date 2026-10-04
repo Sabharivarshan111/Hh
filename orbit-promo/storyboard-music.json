@@ -1,0 +1,171 @@
+[
+  {
+    "at": 0,
+    "d": 3.2,
+    "kind": "montageHook",
+    "caption": "Your next exam.\nOne place to prepare.",
+    "voice": "Too many tabs? Meet Orbit.",
+    "sourceIndex": 0,
+    "accent": "#bc95ff",
+    "sub": "ORBIT MBBS \u2022 TNMGR + KUHS"
+  },
+  {
+    "at": 2.95,
+    "d": 3.85,
+    "kind": "ai",
+    "file": "kuhs-askai",
+    "caption": "Ask ACEV AI.\nKeep moving.",
+    "sub": "Ask. Understand. Keep moving.",
+    "accent": "#65ded7",
+    "voice": "Meet A C E V.",
+    "sourceIndex": 7
+  },
+  {
+    "at": 6.55,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "tnmgr-answer",
+    "caption": "From question\nto AI notes.",
+    "mode": "pull",
+    "accent": "#bc95ff",
+    "voice": "Triple tap. Open A I notes.",
+    "sourceIndex": 5
+  },
+  {
+    "at": 9.65,
+    "d": 3.35,
+    "kind": "cards",
+    "files": [
+      "kuhs-anki",
+      "kuhs-anki-answer"
+    ],
+    "caption": "Test your memory.\nReveal the answer.",
+    "accent": "#65ded7",
+    "voice": "Recall first, then reveal the answer.",
+    "sourceIndex": 8
+  },
+  {
+    "at": 12.75,
+    "d": 3.35,
+    "kind": "mcq",
+    "file": "tnmgr-mcq",
+    "caption": "Put your recall\nto the test.",
+    "accent": "#bc95ff",
+    "voice": "Practise M C Qs, in a tap.",
+    "sourceIndex": 6
+  },
+  {
+    "at": 15.85,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "kuhs-search",
+    "caption": "Find the chapter.\nSkip the scroll.",
+    "mode": "macro",
+    "voice": "Search. Find your chapter.",
+    "sourceIndex": 4,
+    "accent": "#65ded7"
+  },
+  {
+    "at": 18.95,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "tnmgr-questions",
+    "caption": "Your topics.\nYour question bank.",
+    "mode": "push",
+    "voice": "A topic. The questions.",
+    "sourceIndex": 3,
+    "accent": "#bc95ff"
+  },
+  {
+    "at": 22.05,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "tnmgr-personal",
+    "caption": "Make the notes\nyou will revisit.",
+    "mode": "push",
+    "accent": "#65ded7",
+    "voice": "Keep your own revision notes.",
+    "sourceIndex": 9
+  },
+  {
+    "at": 25.15,
+    "d": 3.35,
+    "kind": "screen",
+    "file": "kuhs-timer",
+    "caption": "One focused session.\nThen another.",
+    "mode": "macro",
+    "accent": "#bc95ff",
+    "voice": "A little focus. Every day.",
+    "sourceIndex": 11
+  },
+  {
+    "at": 28.25,
+    "d": 3.35,
+    "kind": "dual",
+    "files": [
+      "tnmgr-progress",
+      "tnmgr-attendance"
+    ],
+    "caption": "Your progress.\nYour attendance.",
+    "accent": "#65ded7",
+    "voice": "Attendance. Study progress.",
+    "sourceIndex": 10
+  },
+  {
+    "at": 31.35,
+    "d": 3.35,
+    "kind": "home",
+    "caption": "Choose your year.\nSet your direction.",
+    "files": [
+      "tnmgr-home",
+      "kuhs-home"
+    ],
+    "voice": "Pick your year. Start revising.",
+    "sourceIndex": 2,
+    "accent": "#bc95ff"
+  },
+  {
+    "at": 34.45,
+    "d": 3.35,
+    "kind": "universities",
+    "caption": "TNMGR. KUHS.\nYour university.",
+    "sub": "Two university question banks.",
+    "files": [
+      "tnmgr-subjects",
+      "kuhs-subjects"
+    ],
+    "voice": "Your university. Your questions.",
+    "sourceIndex": 1,
+    "accent": "#65ded7"
+  },
+  {
+    "at": 37.55,
+    "d": 3.35,
+    "kind": "numbers",
+    "caption": "Two patterns.\nOne ORBIT.",
+    "sub": "University-specific question banks",
+    "voice": "Two patterns. One Orbit.",
+    "sourceIndex": 13,
+    "accent": "#bc95ff"
+  },
+  {
+    "at": 40.65,
+    "d": 3.35,
+    "kind": "india",
+    "caption": "Made in India.",
+    "sub": "Built by a medical student.",
+    "voice": "Made in India.",
+    "sourceIndex": 12,
+    "accent": "#65ded7"
+  },
+  {
+    "at": 43.75,
+    "d": 4.25,
+    "kind": "end",
+    "caption": "Find your orbit.",
+    "sub": "ORBIT MBBS \u00b7 TNMGR + KUHS",
+    "voice": "Find your orbit. Get it on Google Play.",
+    "sourceIndex": 14,
+    "accent": "#bc95ff"
+  }
+]
